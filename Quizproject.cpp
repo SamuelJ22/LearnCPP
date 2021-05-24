@@ -3,7 +3,8 @@
 #include <cstdlib>
 using namespace std;
 
-int a, num1, num2,result;
+int a, num1, num2, count=0;
+float result, perc, devision, p ;
 int rand_range()
 {
     num1 = rand() % 100 + 1;
@@ -35,9 +36,12 @@ int main()
         cout<<"Enter the addition of :- "<< num1 << " + " << num2<<endl;
         cin>>result;
         if(num1+num2==result)
-        cout<<"The annwer is Correct"<<endl;
+        {cout<<"The annwer is Correct"<<endl;
+          count++;
+        }
+
         else
-        cout<<"The annwer is Wrong"<<endl;
+        cout<<"The answer is Wrong"<<endl;
         cout << num1 << " + " << num2 << " = " << num1 + num2<<endl;
         break;
 
@@ -46,9 +50,11 @@ int main()
         cout<<"Enter the subtraction of :- "<< num1 << " - " << num2<<endl;
         cin>>result;
         if(num1-num2==result)
-        cout<<"The annwer is correct"<<endl;
+        {cout<<"The answer is correct"<<endl;
+        count++;
+        }
         else
-        cout<<"The annwer is Wrong"<<endl;
+        cout<<"The answer is Wrong"<<endl;
 
         cout << num1 << " - " << num2 << " = " << num1 - num2<<endl;
         break;
@@ -58,21 +64,26 @@ int main()
         cout<<"Enter the multiplication of :- "<< num1 << " * " << num2<<endl;
         cin>>result;
         if(num1*num2==result)
-        cout<<"The annwer is correct"<<endl;
+        {cout<<"The answer is correct"<<endl;
+        count++;
+        }
         else
-        cout<<"The annwer is Wrong"<<endl;
+        cout<<"The answer is Wrong"<<endl;
         cout << num1 << " * " << num2 << " = " << num1 * num2<<endl;
         break;
 
     case 4:
         rand_range();
-        cout<<"Enter the devision of :- "<< num1 << " / " << num2<<endl;
+        cout<<"Enter the devision of :- "<< num1*num2 << " / " << num2<<endl;
         cin>>result;
-        if(num1/num2==result)
-        cout<<"The annwer is correct"<<endl;
+         devision =num1*num2/num2;
+        if( devision ==result)
+        {cout<<"The answer is correct"<<endl;
+        count++;
+        }
         else
-        cout<<"The annwer is Wrong"<<endl;
-        cout << num1 << " / " << num2 << " = " << num1 / num2<<endl;
+        cout<<"The answer is Wrong"<<endl;
+        cout << num1*num2 << " / " << num2 << " = " << devision <<endl;
         break;
 
     //default:
@@ -81,5 +92,11 @@ int main()
        // break;
     }
   }
+    //p=count/a;
+    
+    perc=(count/a);
+    cout<<perc<<endl;
+    cout<<"You got "<<count<<" answers correct out of "<<a<<endl;
+    cout<<"Your percentage is "<<(perc*100)<<endl;
     return 0;
 }
