@@ -3,8 +3,8 @@
 #include <cstdlib>
 using namespace std;
 
-int a, num1, num2, count=0;
-float result, perc, devision, p ;
+int a,  count=0;
+float result, perc, num1, num2 ;
 int rand_range()
 {
     num1 = rand() % 100 + 1;
@@ -74,16 +74,16 @@ int main()
 
     case 4:
         rand_range();
-        cout<<"Enter the devision of :- "<< num1*num2 << " / " << num2<<endl;
+        cout<<"Enter the devision of :- "<< num1 << " / " << num2<<endl;
         cin>>result;
-         devision =num1*num2/num2;
-        if( devision ==result)
+         
+        if( num1/num2==result)
         {cout<<"The answer is correct"<<endl;
         count++;
         }
         else
         cout<<"The answer is Wrong"<<endl;
-        cout << num1*num2 << " / " << num2 << " = " << devision <<endl;
+        cout << num1<< " / " << num2 << " = " << num1/num2 <<endl;
         break;
 
     //default:
