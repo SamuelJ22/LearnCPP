@@ -16,12 +16,12 @@ int main()
     {
         j = 2;
         k = 1;
-        while(j < arr[i])
+        while (j < arr[i])
         {
             if (arr[i] % j == 0)
                 k = 0;
-                
-         j++;
+
+            j++;
         }
         if (k == 1)
         {

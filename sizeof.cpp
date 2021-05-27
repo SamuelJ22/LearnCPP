@@ -5,7 +5,7 @@ int a = 5;
 float b = 5.5;
 bool c = true;
 char d = 'e' ;
-double f=5.51;
+double f=5.51;--
 int arr[4] = {1, 2, 3, 4};
 int main()
 {

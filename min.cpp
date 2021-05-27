@@ -1,16 +1,20 @@
 #include<iostream>
 using namespace std;
-
 int main()
 {
-  int arr[10]={2,24,36,83,1,21,3,12,4,11};
-  int min=arr[0];
-  for(int i=0; i<10; i++)
-  {
-      if(min>arr[i])
-      min=arr[i];
-      
-  }
-  cout<<"smallest number is="<<min<<endl;
-  return 0;
+    int arr[100], tot, i, s;
+    cout<<"Enter the Size for Array: ";
+    cin>>tot;
+    cout<<"Enter "<<tot<<" Array Elements: ";
+    for(i=0; i<tot; i++)
+        cin>>arr[i];
+    s = arr[0];
+    for(i=1; i<tot; i++)
+    {
+        if(s>arr[i])
+            s = arr[i];
+    }
+    cout<<"\nSmallest Number = "<<s;
+    cout<<endl;
+    return 0;
 }

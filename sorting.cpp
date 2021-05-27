@@ -23,6 +23,7 @@ int main()
     }
 
     // sort the array
+   // cout<<"a+asize is"<<(a+asize)<<endl;
     sort(a, a + asize);
 
     cout << "\nThe array after sorting is :\n";
